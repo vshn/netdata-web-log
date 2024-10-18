@@ -1,5 +1,14 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "reviewers": ["team:nunki"],
+      "automerge": false
+    }
   ]
 }
